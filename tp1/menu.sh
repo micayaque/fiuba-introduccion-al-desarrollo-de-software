@@ -25,6 +25,9 @@ export RUTA_A_EPN1="$HOME/EPNro1"
 crear_entorno() {
     mkdir -p "$RUTA_A_EPN1/entrada" "$RUTA_A_EPN1/salida" "$RUTA_A_EPN1/procesado" #crea el directorio EPNro1 y las carpetas entrada, salida y procesado (-p parent crea el padre si no fue creado antes)
     cp ./consolidar.sh "$RUTA_A_EPN1/"
+    cp ./datos1.txt "$RUTA_A_EPN1/entrada/"
+    cp ./datos2.txt "$RUTA_A_EPN1/entrada/"
+    cp ./datos3.txt "$RUTA_A_EPN1/entrada/"
 }
 
 correr_proceso() {
@@ -33,7 +36,7 @@ correr_proceso() {
         return
     fi
 
-    bash "$RUTA_A_EPN1/consolidar.sh" &  #si existe el entorno corre el script consolidar.sh en background (&)
+    bash "$RUTA_A_EPN1/consolidar.sh" > /dev/null 2>&1 &   #corre el script consolidar.sh en background (&) se descarta la salida a null (>/dev/null) y también la salida de "errores" ej "no hay más archivos" (2>&1) para poder ver el menú en la terminal
 }
 
 #formato de los datos en el archivo FILENAME.txt: padrón, nombre, apellido, email, nota
