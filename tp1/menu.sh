@@ -46,9 +46,9 @@ mostrar_alumnos() {
 }
 
 mostrar_notas_altas() {
-    if [[ -f "$RUTA_A_EPN1/salida/$FILENAME.txt" ]]; then                #si existe el archivo FILENAME.txt en la carpeta salida
-        sort -k4 -nr "$RUTA_A_EPN1/salida/$FILENAME.txt" | head -n 10     #muestra las 10 notas más altas
-    fi
+    # if [[ -f "$RUTA_A_EPN1/salida/$FILENAME.txt" ]]; then                #si existe el archivo FILENAME.txt en la carpeta salida
+    #     sort -k4 -nr "$RUTA_A_EPN1/salida/$FILENAME.txt" | head -n 10     #muestra las 10 notas más altas
+    # fi
 }
 
 mostrar_datos_alumno() {
