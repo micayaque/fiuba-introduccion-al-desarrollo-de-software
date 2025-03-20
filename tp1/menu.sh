@@ -9,7 +9,6 @@ if [[ "$1" == "-d" ]]; then
 fi
 
 export FILENAME="datos-alumnos"    #con export para que esté disponible para el script y para cualquier proceso hijo que se inicie (consolidar)
-#export FILENAME=${FILENAME:-"datos-alumnos"}
 
 mostrar_menu() {
     echo "1) Crear entorno"
