@@ -28,6 +28,7 @@ crear_entorno() {
     cp ./datos1.txt "$RUTA_A_EPN1/entrada/"
     cp ./datos2.txt "$RUTA_A_EPN1/entrada/"
     cp ./datos3.txt "$RUTA_A_EPN1/entrada/"
+    touch "$RUTA_A_EPN1/salida/$FILENAME.txt"
 }
 
 correr_proceso() {
