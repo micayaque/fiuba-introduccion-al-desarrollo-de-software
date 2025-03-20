@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [[ "$1" == "-d" ]]; then
-    # Si el usuario corre el script con el parámetro -d  
+export RUTA_A_EPN1="$HOME/EPNro1"
 
-    rm -r "$RUTA_A_EPN1"   # se borrará todo el entorno creado recursivamente desde el directorio EPN1
-    pkill consolidar.sh  # y se matarán los procesos creados en background
+if [[ "$1" == "-d" ]]; then
+    rm -r "$RUTA_A_EPN1"   # se borra todo el entorno creado recursivamente desde el directorio EPN1
+    pkill consolidar.sh  # y se matan los procesos creados en background
     exit
 fi
 
@@ -19,14 +19,13 @@ mostrar_menu() {
     echo "6) Salir"
 }
 
-export RUTA_A_EPN1="$HOME/EPNro1"
-
 crear_entorno() {
     mkdir -p "$RUTA_A_EPN1/entrada" "$RUTA_A_EPN1/salida" "$RUTA_A_EPN1/procesado" #crea el directorio EPNro1 y las carpetas entrada, salida y procesado (-p parent crea el padre si no fue creado antes)
     cp ./consolidar.sh "$RUTA_A_EPN1/"
     cp ./datos1.txt "$RUTA_A_EPN1/entrada/"
     cp ./datos2.txt "$RUTA_A_EPN1/entrada/"
     cp ./datos3.txt "$RUTA_A_EPN1/entrada/"
+    touch "$RUTA_A_EPN1/salida/$FILENAME.txt"
 }
 
 correr_proceso() {
@@ -48,7 +47,7 @@ mostrar_alumnos() {
 
 mostrar_notas_altas() {
     if [[ -f "$RUTA_A_EPN1/salida/$FILENAME.txt" ]]; then                #si existe el archivo FILENAME.txt en la carpeta salida
-        sort -k4 -nr "$RUTA_A_EPN1/salida/$FILENAME.txt" | head -n 10     #muestra las 10 notas más altas
+        sort -k5,5 -nr "$RUTA_A_EPN1/salida/$FILENAME.txt" | head -n 10     #muestra las 10 notas más altas
     fi
 }
 
