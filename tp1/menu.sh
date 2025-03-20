@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export RUTA_A_EPN1="$HOME/EPNro1"
+
 if [[ "$1" == "-d" ]]; then
     rm -r "$RUTA_A_EPN1"   # se borra todo el entorno creado recursivamente desde el directorio EPN1
     pkill consolidar.sh  # y se matan los procesos creados en background
@@ -16,8 +18,6 @@ mostrar_menu() {
     echo "5) Mostrar los datos de un alumno"
     echo "6) Salir"
 }
-
-export RUTA_A_EPN1="$HOME/EPNro1"
 
 crear_entorno() {
     mkdir -p "$RUTA_A_EPN1/entrada" "$RUTA_A_EPN1/salida" "$RUTA_A_EPN1/procesado" #crea el directorio EPNro1 y las carpetas entrada, salida y procesado (-p parent crea el padre si no fue creado antes)
@@ -46,9 +46,9 @@ mostrar_alumnos() {
 }
 
 mostrar_notas_altas() {
-    # if [[ -f "$RUTA_A_EPN1/salida/$FILENAME.txt" ]]; then                #si existe el archivo FILENAME.txt en la carpeta salida
-    #     sort -k4 -nr "$RUTA_A_EPN1/salida/$FILENAME.txt" | head -n 10     #muestra las 10 notas más altas
-    # fi
+    if [[ -f "$RUTA_A_EPN1/salida/$FILENAME.txt" ]]; then                #si existe el archivo FILENAME.txt en la carpeta salida
+        sort -k5,5 -nr "$RUTA_A_EPN1/salida/$FILENAME.txt" | head -n 10     #muestra las 10 notas más altas
+    fi
 }
 
 mostrar_datos_alumno() {
