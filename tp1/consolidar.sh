@@ -8,7 +8,5 @@ while true; do
 	        mv "$archivo" "$RUTA_A_EPN1/procesado/"    #mueve el archivo a la carpeta procesado
         fi
 
-        #awk '1; END { print "" }' "$archivo" >> "$RUTA_A_EPN1/salida/$FILENAME.txt"
-        #printf "%s\n" "$(cat "$archivo")" >> "$RUTA_A_EPN1/salida/$FILENAME.txt
     done
 done

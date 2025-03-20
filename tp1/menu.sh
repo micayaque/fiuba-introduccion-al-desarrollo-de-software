@@ -1,15 +1,12 @@
 #!/bin/bash
 
 if [[ "$1" == "-d" ]]; then
-    # Si el usuario corre el script con el parámetro -d  
-
-    rm -r "$RUTA_A_EPN1"   # se borrará todo el entorno creado recursivamente desde el directorio EPN1
-    pkill consolidar.sh  # y se matarán los procesos creados en background
+    rm -r "$RUTA_A_EPN1"   # se borra todo el entorno creado recursivamente desde el directorio EPN1
+    pkill consolidar.sh  # y se matan los procesos creados en background
     exit
 fi
 
 export FILENAME="datos-alumnos"    #con export para que esté disponible para el script y para cualquier proceso hijo que se inicie (consolidar)
-#export FILENAME=${FILENAME:-"datos-alumnos"}
 
 mostrar_menu() {
     echo "1) Crear entorno"
