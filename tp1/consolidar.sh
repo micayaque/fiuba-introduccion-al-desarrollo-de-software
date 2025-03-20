@@ -3,8 +3,14 @@
 while true; do
     for archivo in "$RUTA_A_EPN1/entrada"/*.txt; do #tomamos cada archivo en la carpeta entrada
 
-        cat "$archivo" >> "$RUTA_A_EPN1/salida/$FILENAME.txt"  #concatena los datos del archivo al final de FILENAME.txt, que si no existe lo crea
-        
+        #awk '1; END { print "" }' "$archivo" >> "$RUTA_A_EPN1/salida/$FILENAME.txt"
+        #printf "%s\n" "$(cat "$archivo")" >> "$RUTA_A_EPN1/salida/$FILENAME.txt"
+
+        #cat "$archivo" >> "$RUTA_A_EPN1/salida/$FILENAME.txt"
+
+        # Asegurar un salto de línea al final del archivo de salida
+        #echo "" >> "$RUTA_A_EPN1/salida/$FILENAME.txt"
+
         mv "$archivo" "$RUTA_A_EPN1/procesado/"    #mueve el archivo a la carpeta procesado
     done
 done
