@@ -12,6 +12,6 @@ pip install flask
 touch src/app.py
 
 #copiar el contenido de css e images dado por la cátedra
-cp -r ../tp2_flask/css/* static/css/
-cp -r ../tp2_flask/images/* static/images/
+cp -r ../template/css/* static/css/
+cp -r ../template/images/* static/images/
 #-r es el parámetro para hacerlo recursivamente copiando carpetas
