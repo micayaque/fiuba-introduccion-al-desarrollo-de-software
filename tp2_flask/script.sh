@@ -13,5 +13,7 @@ touch src/app.py
 
 #copiar el contenido de css e images dado por la cátedra
 cp -r ../template/css/* static/css/
+cp -r ../template/fonts/* static/fonts/
 cp -r ../template/images/* static/images/
+cp -r ../template/js/* static/js/
 #-r es el parámetro para hacerlo recursivamente copiando carpetas
