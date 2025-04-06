@@ -4,7 +4,7 @@ export RUTA_A_EPN1="$HOME/EPNro1"
 
 if [[ "$1" == "-d" ]]; then
     rm -r "$RUTA_A_EPN1"   # se borra todo el entorno creado recursivamente desde el directorio EPN1
-    pkill consolidar.sh  # y se matan los procesos creados en background
+    pkill -f consolidar.sh  # y se matan los procesos creados en background
     exit
 fi
 
