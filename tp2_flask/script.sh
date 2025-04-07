@@ -15,3 +15,7 @@ touch src/app.py
 cp -r ../template/css/* static/css/
 cp -r ../template/images/* static/images/
 #-r es el parámetro para hacerlo recursivamente copiando carpetas
+
+cp ../template/contact.html templates/contact.html
+cp ../template/index.html templates/index.html
+cp ../template/menu.html templates/menu.html
