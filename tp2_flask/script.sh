@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p TP2-IDS/{static/{css,images},templates,src}
+mkdir -p TP2-IDS/{static/{css,images,fonts,js},templates,src}
 # el parámetro -p permite crear los directorios intermedios
 
 cd TP2-IDS
