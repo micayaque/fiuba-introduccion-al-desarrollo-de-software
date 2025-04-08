@@ -12,10 +12,10 @@ pip install flask
 touch src/app.py
 
 #copiar el contenido dado por la cátedra
-cp -r ../src/template/css/* static/css/
-cp -r ../src/template/fonts/* static/fonts/
-cp -r ../src/template/images/* static/images/
-cp -r ../src/template/js/* static/js/
+cp -r ../template/css/* static/css/
+cp -r ../template/fonts/* static/fonts/
+cp -r ../template/images/* static/images/
+cp -r ../template/js/* static/js/
 #-r es el parámetro para hacerlo recursivamente copiando carpetas
 
 cp ../template/contact.html src/templates/contact.html
