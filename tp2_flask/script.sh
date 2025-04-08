@@ -11,7 +11,7 @@ source .venv/bin/activate
 pip install flask
 touch src/app.py
 
-#copiar el contenido de css e images dado por la cátedra
+#copiar el contenido dado por la cátedra
 cp -r ../template/css/* static/css/
 cp -r ../template/fonts/* static/fonts/
 cp -r ../template/images/* static/images/
