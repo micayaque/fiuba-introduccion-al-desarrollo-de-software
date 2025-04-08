@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p TP2-IDS/{static/{css,images,fonts,js},templates,src}
+mkdir -p TP2-IDS/{static/{css,images,fonts,js},src/templates}
 # el parámetro -p permite crear los directorios intermedios
 
 cd TP2-IDS
@@ -12,12 +12,12 @@ pip install flask
 touch src/app.py
 
 #copiar el contenido dado por la cátedra
-cp -r ../template/css/* static/css/
-cp -r ../template/fonts/* static/fonts/
-cp -r ../template/images/* static/images/
-cp -r ../template/js/* static/js/
+cp -r ../src/template/css/* static/css/
+cp -r ../src/template/fonts/* static/fonts/
+cp -r ../src/template/images/* static/images/
+cp -r ../src/template/js/* static/js/
 #-r es el parámetro para hacerlo recursivamente copiando carpetas
 
-cp ../template/contact.html templates/contact.html
-cp ../template/index.html templates/index.html
-cp ../template/menu.html templates/menu.html
+cp ../template/contact.html src/templates/contact.html
+cp ../template/index.html src/templates/index.html
+cp ../template/menu.html src/templates/menu.html
