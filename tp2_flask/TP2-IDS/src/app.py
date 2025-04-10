@@ -1,10 +1,13 @@
 from flask import Flask, render_template
+from datetime import datetime
+
+nombre_cafeteria = "Ghirardelli"
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/index.html')
 def index():
-    return render_template('index.html')
+    return render_template('index.html',nombre_cafeteria=nombre_cafeteria,)
 
 @app.route('/menu.html')
 def menu():
