@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#permiso: chmod +x script.sh
+
 mkdir -p TP2-IDS/{.venv,src/static/{css,images,fonts,js},src/templates}
 # el parámetro -p permite crear los directorios intermedios
 
