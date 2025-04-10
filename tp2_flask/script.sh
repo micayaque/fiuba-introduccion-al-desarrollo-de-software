@@ -31,3 +31,7 @@ echo $'from flask import Flask, render_template\n\napp = Flask(__name__)'"$(cat 
 #$ antes de el comando cat permite que se lea el contenido en app.py y junto con > se inserte al inicio el bloque de texto
 
 flask run --debug
+
+#EJERCICIO 2
+
+touch templates/base.html
