@@ -5,14 +5,14 @@ nombre_cafeteria = "Ghirardelli"
 
 app = Flask(__name__)
 
-@app.route('/index.html')
+@app.route('/index')
 def index():
     return render_template('index.html', nombre_cafeteria=nombre_cafeteria,)
 
-@app.route('/menu.html')
+@app.route('/menu')
 def menu():
     return render_template('menu.html', nombre_cafeteria=nombre_cafeteria)
 
-@app.route('/contact.html')
+@app.route('/contact')
 def contact():
     return render_template('contact.html', nombre_cafeteria=nombre_cafeteria)
