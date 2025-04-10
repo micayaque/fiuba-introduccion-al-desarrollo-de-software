@@ -1,9 +1,5 @@
 {% extends "base.html" %}
 
-
-{% block header %}
-{% endblock %}	
-
 	{% block content %}
 	<body>
 
@@ -112,7 +108,7 @@
 					<aside id="fh5co-slider-wrwap">
 					<div class="flexslider">
 						<ul class="slides">
-					   	<li style="background-image: url({{ url_for('static', filename='images/gallery_7.jpeg') }});">
+					   	<li style="background-image: url({ url_for('static', filename='images/gallery_7.jpeg') }});">
 					   		<div class="overlay-gradient"></div>
 					   		<div class="container-fluid">
 					   			<div class="row">
