@@ -7,12 +7,12 @@ app = Flask(__name__)
 
 @app.route('/index.html')
 def index():
-    return render_template('index.html',nombre_cafeteria=nombre_cafeteria,)
+    return render_template('index.html', nombre_cafeteria=nombre_cafeteria,)
 
 @app.route('/menu.html')
 def menu():
-    return render_template('menu.html')
+    return render_template('menu.html', nombre_cafeteria=nombre_cafeteria)
 
 @app.route('/contact.html')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.html', nombre_cafeteria=nombre_cafeteria)
