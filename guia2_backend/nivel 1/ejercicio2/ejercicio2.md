@@ -28,10 +28,10 @@ if __name__ == '__main__':
 
 * Verificar que la respuesta incluya el **nombre** y un **código HTTP** `200`.
 
-![](/ejercicio2/navegador.png)
+![](./img/navegador.png)
 
-![](/ejercicio2/postman.png)
+![](./img/postman.png)
 
 * Documentar la ruta en Postman.
 
-![](/ejercicio2/documentado.png)
+![](./img/documentado.png)
