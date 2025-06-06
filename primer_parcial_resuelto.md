@@ -242,3 +242,4 @@ Para que la función `changeColor` funcione correctamente, se debe incluir el sc
 
 ```html
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+````
